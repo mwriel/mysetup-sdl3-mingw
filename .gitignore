@@ -1,0 +1,13 @@
+*.exe
+*.o
+claro.c
+geometria.c
+imgp.c
+lineas.c
+myFirstSDLApp.c
+notas.txt
+primitivos.c
+puntos.c
+readp.c
+rect.c
+text.c
