@@ -32,10 +32,16 @@ void process_surface(SDL_Surface *surface)
             Uint8 *p = (Uint8 *)(&((Uint32 *)(((Uint8 *)surface->pixels) + (y * surface->pitch)))[x]);
 
             // Calcular la intensidad en escala de grises usando el promedio los canales RGB para binarizar
-            Uint8 grayscale = (Uint8)(((Uint32)p[1]  + (Uint32)p[2] + (Uint32)p[3])/3);
+            
+            Uint8 grayscale = (Uint8)(((Uint32)p[1] * 0.1141f + (Uint32)p[2] * 0.587f + (Uint32)p[3] * 0.2989f));
             // Uint8 grayscale2 = (Uint8)(((Uint32) p[1] + (Uint32) p[2] + (Uint32) p[3])/3);
 
             // Asignar el valor de escala de grises a todos los canales RGB
+            if(grayscale<128){
+                grayscale=0x00;
+            }else{
+                grayscale=0xFF;
+            }
 
             p[1] = grayscale; // Azul
             p[2] = grayscale; // Verde

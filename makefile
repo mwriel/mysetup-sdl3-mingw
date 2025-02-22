@@ -18,10 +18,7 @@ EXECS = claro.exe myFirstSDLApp.exe primitivos.exe
 
 # Regla por defecto
 default: 
-	para crear propiamente la practica hay que ejecutar make graficas.exe
-	aparte para modificar el algoritmo se necesita modificar el archivo drawit.c
-	si decea añadir otra funcion en graficas.exe se recomienda añadirla a drawit.h
-	definirla en drawit.c y ejecutar el mismo comando
+	echo para crear propiamente la practica hay que ejecutar make graficas."nombre de el archivo c con las funciones en graficas.h".exe por ejemplo make graficas.binarizacion.exe
 
 # Crear el ejecutable 'new.exe'
 #claro.exe: claro.o $(LIB_HEADERS) $(LIB_FILES)
