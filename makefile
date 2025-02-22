@@ -45,8 +45,12 @@ default:
 # Limpiar archivos generados
 clean:
 	rm -f *.o $(EXECS)
-graficas.exe: graficas.o drawit.o
+graficasdeprecated.exe: graficas.o drawit.o
 
 	$(CXX) $^ -o $@ $(LDFLAGS) $(LIBS)
 say: graficas.o  drawit.o
 	echo $^
+
+graficas.%.exe: graficas.o %.o
+
+	$(CXX) $^ -o $@ $(LDFLAGS) $(LIBS)
