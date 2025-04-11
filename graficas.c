@@ -70,6 +70,8 @@
      
      texture_width = surface->w;
      texture_height = surface->h;
+     //process_surface(surface);
+     
  
      texture = SDL_CreateTextureFromSurface(renderer, surface);
      if (!texture) {

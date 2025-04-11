@@ -51,3 +51,7 @@ say: graficas.o  drawit.o
 graficas.%.exe: graficas.o %.o
 
 	$(CXX) $^ -o $@ $(LDFLAGS) $(LIBS)
+
+practica.%.exe: practica.o %.o 
+
+	$(CXX) $^ -o $@ $(LDFLAGS) $(LIBS)

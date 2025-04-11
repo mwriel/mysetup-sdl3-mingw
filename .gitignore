@@ -11,3 +11,6 @@ puntos.c
 readp.c
 rect.c
 text.c
+notes.txt
+camara.c
+histograma.c
